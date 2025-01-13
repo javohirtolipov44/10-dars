@@ -20,7 +20,6 @@ class newsService {
   async getNewsById(params) {
     const news = await this.io.readFile("news.json");
     const newsById = news.find((value) => value.id === parseInt(params.id));
-    console.log(params);
     if (newsById) {
       return newsById;
     }

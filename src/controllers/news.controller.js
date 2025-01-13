@@ -28,7 +28,6 @@ class newsController {
     try {
       const params = req.params;
       const news = await this.newsService.getNewsById(params);
-      console.log(news);
       res.json(news);
     } catch (error) {
       console.error(error.message);
